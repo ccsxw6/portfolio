@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,MAAM,CAAC;EAEL,OAAO,EAAE,IAAI;EACb,WAAW,EAAE,MAAM;EACnB,eAAe,EAAE,MAAM;EACvB,QAAQ,EAAE,QAAQ;CAWnB;;AAhBD,AAMI,MANE,CAMF,UAAU,CAAC;EACT,OAAO,EAAE,IAAI;EACb,WAAW,EAAE,MAAM;EACnB,eAAe,EAAE,MAAM;CAM1B;;AAfH,AAUM,MAVA,CAMF,UAAU,CAIR,GAAG,CAAA;EACD,MAAM,EAAE,KAAK;EACb,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,IAAI;CACb",
+    "sources": [
+        "works.scss",
+        "../../global.scss"
+    ],
+    "names": [],
+    "file": "works.css"
+}
