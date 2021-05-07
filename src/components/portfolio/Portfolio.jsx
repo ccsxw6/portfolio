@@ -3,51 +3,35 @@ import PortfolioList from "../portfolioList/PortfolioList";
 import "./portfolio.scss";
 import {
   featuredPortfolio,
-  webPortfolio,
-  mobilePortfolio,
-  designPortfolio,
   contentPortfolio,
+  myPortfolio
 } from "../../data";
 
+import Raspberry from "../../Assets/raspberry"
+
 export default function Portfolio() {
-  const [selected, setSelected] = useState("featured");
+  const [selected, setSelected] = useState("projects");
   const [data, setData] = useState([]);
+
   const list = [
     {
-      id: "featured",
-      title: "Featured",
+      id: "projects",
+      title: "Projects",
     },
     {
-      id: "web",
-      title: "Web App",
-    },
+      id: "assigments",
+      title: "Assigments",
+    }, 
     {
-      id: "mobile",
-      title: "Mobile App",
-    },
-    {
-      id: "design",
-      title: "Design",
-    },
-    {
-      id: "content",
-      title: "Content",
-    },
+      id: "content", 
+      title: "Content"
+    }
   ];
 
   useEffect(() => {
     switch (selected) {
-      case "featured":
-        setData(featuredPortfolio);
-        break;
-      case "web":
-        setData(webPortfolio);
-        break;
-      case "mobile":
-        setData(mobilePortfolio);
-        break;
-      case "design":
-        setData(designPortfolio);
+      case "projects":
+        setData(myPortfolio);
         break;
       case "content":
         setData(contentPortfolio);
@@ -59,7 +43,7 @@ export default function Portfolio() {
 
   return (
     <div className="portfolio" id="portfolio">
-      <h1>CHANGE THESE To have a project and homework tabs </h1>
+      <h1>Portfolio</h1>
       <ul>
         {list.map((item) => (
           <PortfolioList
@@ -75,12 +59,16 @@ export default function Portfolio() {
           <div className="item">
             <img
               src={d.img}
-              alt=""
+              alt="Project"
             />
-            <h3>{d.title}</h3>
+            {/* <h3>{d.title}</h3>
+            <p>{d.github}</p>
+            <p>{d.deployed}</p> */}
           </div>
         ))}
       </div>
+
+    <img src={Raspberry} alt=""/>
     </div>
   );
 }

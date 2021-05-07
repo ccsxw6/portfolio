@@ -10,6 +10,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 100px;
 }
 
 .portfolio h1 {
@@ -43,6 +44,7 @@
 }
 
 .portfolio .container {
+  background-color: blue;
   width: 70%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -64,8 +66,8 @@
 }
 
 .portfolio .container .item {
-  width: 220px;
-  height: 150px;
+  width: 370px;
+  height: 300px;
   border-radius: 20px;
   border: 1px solid #f0efef;
   margin: 10px 20px;
@@ -103,6 +105,7 @@
   -o-object-fit: cover;
      object-fit: cover;
   z-index: 1;
+  overflow: hidden;
 }
 
 .portfolio .container .item:hover {
