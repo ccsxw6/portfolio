@@ -1,13 +1,32 @@
 import { useEffect, useState } from "react";
 import PortfolioList from "../portfolioList/PortfolioList";
 import "./portfolio.scss";
-import {
-  featuredPortfolio,
-  contentPortfolio,
-  myPortfolio
-} from "../../data";
+// import {
+//   featuredPortfolio,
+//   contentPortfolio,
+//   myPortfolio
+// } from "./data.js";
 
-import Raspberry from "../../Assets/raspberry"
+// THIS LINK WORKS
+import Raspberry from "./raspberry.PNG"
+import Casino from "./CasinoMultiplayer.PNG"
+
+const myPortfolio = [
+  {
+    id: 1,
+    // title: "Casino Kings",
+    img: {Casino},
+    // github: "https://github.com/ccsxw6/Casino_Multiplayer",
+    // deployed: "https://casino-multiplayer.herokuapp.com/"
+  }, 
+  {
+    id: 1,
+    // title: "Raspberry Jam Session",
+    img: {Raspberry},
+    // github: "https://github.com/ccsxw6/Raspberry-Jam-Session",
+    // deployed: "https://ccsxw6.github.io/Raspberry-Jam-Session/"
+  }
+]
 
 export default function Portfolio() {
   const [selected, setSelected] = useState("projects");
@@ -32,12 +51,13 @@ export default function Portfolio() {
     switch (selected) {
       case "projects":
         setData(myPortfolio);
+        console.log(myPortfolio)
         break;
-      case "content":
-        setData(contentPortfolio);
-        break;
+      // case "content":
+      //   setData(contentPortfolio);
+      //   break;
       default:
-        setData(featuredPortfolio);
+        setData(myPortfolio);
     }
   }, [selected]);
 
@@ -54,21 +74,22 @@ export default function Portfolio() {
           />
         ))}
       </ul>
+      {/* HAS SOMETHING TO DO WITH CSS */}
       <div className="container">
         {data.map((d) => (
           <div className="item">
             <img
               src={d.img}
+              // src= {Raspberry}
               alt="Project"
             />
-            {/* <h3>{d.title}</h3>
-            <p>{d.github}</p>
-            <p>{d.deployed}</p> */}
+            {/* <h3>{d.title}</h3> */}
+            {/* <p>{d.github}</p> */}
+            {/* <p>{d.deployed}</p>  */}
           </div>
         ))}
       </div>
-
-    <img src={Raspberry} alt=""/>
+      {/* <img src={Raspberry} alt="YOOOOOOOOOO"/> */}
     </div>
   );
 }
