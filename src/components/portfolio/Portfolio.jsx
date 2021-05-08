@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import PortfolioList from "../portfolioList/PortfolioList";
 import "./portfolio.scss";
 // import {
@@ -8,29 +8,38 @@ import "./portfolio.scss";
 // } from "./data.js";
 
 // THIS LINK WORKS
-import Raspberry from "./raspberry.PNG"
-import Casino from "./CasinoMultiplayer.PNG"
+
+
+
+// TRY PUTTING IMAGES IN AN IMAGES FOLDER INSIDE OF THE PORTFOLIO FOLDER, LIKE IN INTRO.JS
+
+
+
+import Raspberry from "./raspberry.PNG";
+import Casino from "./casino.PNG";
+// import { Card } from "../card/Card";
 
 const myPortfolio = [
   {
     id: 1,
-    // title: "Casino Kings",
-    img: {Casino},
-    // github: "https://github.com/ccsxw6/Casino_Multiplayer",
-    // deployed: "https://casino-multiplayer.herokuapp.com/"
-  }, 
+    title: "Casino Kings",
+    img: {Raspberry},
+    github: "https://github.com/ccsxw6/Casino_Multiplayer",
+    deployed: "https://casino-multiplayer.herokuapp.com/"
+  },
   {
     id: 1,
-    // title: "Raspberry Jam Session",
-    img: {Raspberry},
-    // github: "https://github.com/ccsxw6/Raspberry-Jam-Session",
-    // deployed: "https://ccsxw6.github.io/Raspberry-Jam-Session/"
-  }
-]
+    title: "Raspberry Jam Session",
+    img: {Casino},
+    github: "https://github.com/ccsxw6/Raspberry-Jam-Session",
+    deployed: "https://ccsxw6.github.io/Raspberry-Jam-Session/"
+  },
+];
 
 export default function Portfolio() {
   const [selected, setSelected] = useState("projects");
-  const [data, setData] = useState([]);
+  // data is going to be what's stored in the myPortfolio component
+  // const [data, setData] = useState([]);
 
   const list = [
     {
@@ -40,56 +49,53 @@ export default function Portfolio() {
     {
       id: "assigments",
       title: "Assigments",
-    }, 
-    {
-      id: "content", 
-      title: "Content"
-    }
+    },
   ];
 
-  useEffect(() => {
-    switch (selected) {
-      case "projects":
-        setData(myPortfolio);
-        console.log(myPortfolio)
-        break;
-      // case "content":
-      //   setData(contentPortfolio);
-      //   break;
-      default:
-        setData(myPortfolio);
-    }
-  }, [selected]);
+  // useEffect(() => {
+  //   switch (selected) {
+  //     case "projects":
+  //       setData(myPortfolio);
+  //       console.log(myPortfolio);
+  //       break;
+  //     case "assigments":
+  //       setData(myPortfolio);
+  //       break;
+  //     default:
+  //       setData(myPortfolio);
+  //   }
+  // }, [selected]);
+
 
   return (
-    <div className="portfolio" id="portfolio">
+    <div className="wrapper" id="portfolio">
       <h1>Portfolio</h1>
       <ul>
         {list.map((item) => (
+          // Portfoliolist is the tabs to switch between project and assignments
           <PortfolioList
             title={item.title}
             active={selected === item.id}
             setSelected={setSelected}
             id={item.id}
+            key={item.id}
           />
         ))}
       </ul>
-      {/* HAS SOMETHING TO DO WITH CSS */}
-      <div className="container">
-        {data.map((d) => (
-          <div className="item">
-            <img
-              src={d.img}
-              // src= {Raspberry}
-              alt="Project"
-            />
-            {/* <h3>{d.title}</h3> */}
-            {/* <p>{d.github}</p> */}
-            {/* <p>{d.deployed}</p>  */}
+
+    {myPortfolio.map((d) => (
+      <main className="card">
+        <article>
+          <img src="assets/right-arrow.png" className="wherethefuckisthisimage" alt="yo" key={d.id}/>
+          <div className="text">
+            <h3>{d.title}</h3>
+            <p>{d.github}</p>
+            <p>{d.deployed}</p>
           </div>
+        </article>
+      </main>
+
         ))}
-      </div>
-      {/* <img src={Raspberry} alt="YOOOOOOOOOO"/> */}
     </div>
   );
 }
