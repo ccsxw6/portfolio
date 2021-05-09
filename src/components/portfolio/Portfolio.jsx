@@ -15,22 +15,30 @@ import "./portfolio.scss";
 
 
 
-import Raspberry from "./raspberry.PNG";
-import Casino from "./casino.PNG";
+// import Raspberry from "/imgs/raspberry.png";
+// import Casino from "/imgs/casino.png";
 // import { Card } from "../card/Card";
+
 
 const myPortfolio = [
   {
     id: 1,
     title: "Casino Kings",
-    img: {Raspberry},
+    img: process.env.PUBLIC_URL + "/imgs/raspberry.png",
     github: "https://github.com/ccsxw6/Casino_Multiplayer",
     deployed: "https://casino-multiplayer.herokuapp.com/"
   },
   {
-    id: 1,
+    id: 2,
+    title: "Learn Something New",
+    img: process.env.PUBLIC_URL + "/imgs/flashcard.gif",
+    github: "https://github.com/ccsxw6/Learn-Something-New",
+    deployed: "https://still-retreat-71642.herokuapp.com/"
+  },
+  {
+    id: 3,
     title: "Raspberry Jam Session",
-    img: {Casino},
+    img: process.env.PUBLIC_URL + "/imgs/casino.png",
     github: "https://github.com/ccsxw6/Raspberry-Jam-Session",
     deployed: "https://ccsxw6.github.io/Raspberry-Jam-Session/"
   },
@@ -40,6 +48,7 @@ export default function Portfolio() {
   const [selected, setSelected] = useState("projects");
   // data is going to be what's stored in the myPortfolio component
   // const [data, setData] = useState([]);
+
 
   const list = [
     {
@@ -86,7 +95,11 @@ export default function Portfolio() {
     {myPortfolio.map((d) => (
       <main className="card">
         <article>
-          <img src="assets/right-arrow.png" className="wherethefuckisthisimage" alt="yo" key={d.id}/>
+          <img src={d.img} 
+          // className="wherethefuckisthisimage" 
+          alt="yo" 
+          // key={d.id}
+          />
           <div className="text">
             <h3>{d.title}</h3>
             <p>{d.github}</p>
