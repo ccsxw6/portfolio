@@ -103,8 +103,14 @@ export default function Portfolio() {
           />
           <div className="projInfo">
             <h3>{d.title}</h3>
-            <p>{d.github}</p>
-            <p>{d.deployed}</p>
+            
+            <p>
+            <a target="_blank" rel="noopener noreferrer" href={d.github}>{d.github}</a>
+            </p>
+
+            <p>
+            <a target="_blank" rel="noopener noreferrer" href={d.deployed}>{d.deployed}</a>
+            </p> 
           </div>
       </div>
         ))}
