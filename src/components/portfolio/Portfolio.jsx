@@ -1,5 +1,5 @@
 import { useState } from "react";
-import PortfolioList from "../portfolioList/PortfolioList";
+// import PortfolioList from "../portfolioList/PortfolioList";
 import "./portfolio.scss";
 // import {
 //   featuredPortfolio,
@@ -24,7 +24,7 @@ const myPortfolio = [
   {
     id: 1,
     title: "Casino Kings",
-    img: process.env.PUBLIC_URL + "/imgs/raspberry.png",
+    img: process.env.PUBLIC_URL + "/imgs/casino.png",
     github: "https://github.com/ccsxw6/Casino_Multiplayer",
     deployed: "https://casino-multiplayer.herokuapp.com/"
   },
@@ -38,28 +38,28 @@ const myPortfolio = [
   {
     id: 3,
     title: "Raspberry Jam Session",
-    img: process.env.PUBLIC_URL + "/imgs/casino.png",
+    img: process.env.PUBLIC_URL + "/imgs/raspberry.png",
     github: "https://github.com/ccsxw6/Raspberry-Jam-Session",
     deployed: "https://ccsxw6.github.io/Raspberry-Jam-Session/"
   },
 ];
 
 export default function Portfolio() {
-  const [selected, setSelected] = useState("projects");
+  // const [selected, setSelected] = useState("projects");
   // data is going to be what's stored in the myPortfolio component
   // const [data, setData] = useState([]);
 
 
-  const list = [
-    {
-      id: "projects",
-      title: "Projects",
-    },
-    {
-      id: "assigments",
-      title: "Assigments",
-    },
-  ];
+  // const list = [
+  //   {
+  //     id: "projects",
+  //     title: "Projects",
+  //   },
+  //   {
+  //     id: "assigments",
+  //     title: "Assigments",
+  //   },
+  // ];
 
   // useEffect(() => {
   //   switch (selected) {
@@ -77,37 +77,36 @@ export default function Portfolio() {
 
 
   return (
-    <div className="wrapper" id="portfolio">
-      <h1>Portfolio</h1>
-      <ul>
-        {list.map((item) => (
-          // Portfoliolist is the tabs to switch between project and assignments
-          <PortfolioList
-            title={item.title}
-            active={selected === item.id}
-            setSelected={setSelected}
-            id={item.id}
-            key={item.id}
-          />
-        ))}
-      </ul>
-
+    // <div className="wrapper" id="portfolio">
+    //   <div className="list">
+    //     <h1>Portfolio</h1>
+    //     <ul>
+    //       {list.map((item) => (
+    //         // Portfoliolist is the tabs to switch between project and assignments
+    //         <PortfolioList
+    //           title={item.title}
+    //           active={selected === item.id}
+    //           setSelected={setSelected}
+    //           id={item.id}
+    //           key={item.id}
+    //         />
+    //       ))}
+    //     </ul>
+    //   </div>
+  <div className="grid-container">
     {myPortfolio.map((d) => (
-      <main className="card">
-        <article>
-          <img src={d.img} 
-          // className="wherethefuckisthisimage" 
+      <div className="cardWrapper">
+          <img 
+          src={d.img} 
           alt="yo" 
-          // key={d.id}
+          key={d.id}
           />
-          <div className="text">
+          <div className="projInfo">
             <h3>{d.title}</h3>
             <p>{d.github}</p>
             <p>{d.deployed}</p>
           </div>
-        </article>
-      </main>
-
+      </div>
         ))}
     </div>
   );
