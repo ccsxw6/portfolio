@@ -1,5 +1,5 @@
-import { useState } from "react";
-// import PortfolioList from "../portfolioList/PortfolioList";
+import { useState, useEffect } from "react";
+import PortfolioList from "../portfolioList/PortfolioList";
 import "./portfolio.scss";
 // import {
 //   featuredPortfolio,
@@ -45,54 +45,56 @@ const myPortfolio = [
 ];
 
 export default function Portfolio() {
-  // const [selected, setSelected] = useState("projects");
+  const [selected, setSelected] = useState("projects");
   // data is going to be what's stored in the myPortfolio component
-  // const [data, setData] = useState([]);
+  const [data, setData] = useState([]);
 
 
-  // const list = [
-  //   {
-  //     id: "projects",
-  //     title: "Projects",
-  //   },
-  //   {
-  //     id: "assigments",
-  //     title: "Assigments",
-  //   },
-  // ];
+  const list = [
+    {
+      id: "projects",
+      title: "Projects",
+    },
+    {
+      id: "assigments",
+      title: "Assigments",
+    },
+  ];
 
-  // useEffect(() => {
-  //   switch (selected) {
-  //     case "projects":
-  //       setData(myPortfolio);
-  //       console.log(myPortfolio);
-  //       break;
-  //     case "assigments":
-  //       setData(myPortfolio);
-  //       break;
-  //     default:
-  //       setData(myPortfolio);
-  //   }
-  // }, [selected]);
+  useEffect(() => {
+    switch (selected) {
+      case "projects":
+        setData(myPortfolio);
+        console.log(myPortfolio);
+        break;
+      case "assigments":
+        setData(myPortfolio);
+        break;
+      default:
+        setData(myPortfolio);
+    }
+  }, [selected]);
 
 
   return (
-    // <div className="wrapper" id="portfolio">
-    //   <div className="list">
-    //     <h1>Portfolio</h1>
-    //     <ul>
-    //       {list.map((item) => (
-    //         // Portfoliolist is the tabs to switch between project and assignments
-    //         <PortfolioList
-    //           title={item.title}
-    //           active={selected === item.id}
-    //           setSelected={setSelected}
-    //           id={item.id}
-    //           key={item.id}
-    //         />
-    //       ))}
-    //     </ul>
-    //   </div>
+    // <div className="bigDaddyWrapper">
+    <div className="aboutWrapper" id="portfolio">
+      <div className="list">
+        <h1>Portfolio</h1>
+        <ul>
+          {list.map((item) => (
+            // Portfoliolist is the tabs to switch between project and assignments
+            <PortfolioList
+              title={item.title}
+              active={selected === item.id}
+              setSelected={setSelected}
+              id={item.id}
+              key={item.id}
+            />
+          ))}
+        </ul>
+      </div>
+
   <div className="grid-container">
     {myPortfolio.map((d) => (
       <div className="cardWrapper">
@@ -103,7 +105,7 @@ export default function Portfolio() {
           />
           <div className="projInfo">
             <h3>{d.title}</h3>
-            
+
             <p>
             <a target="_blank" rel="noopener noreferrer" href={d.github}>{d.github}</a>
             </p>
@@ -114,6 +116,7 @@ export default function Portfolio() {
           </div>
       </div>
         ))}
+    </div>
     </div>
   );
 }
