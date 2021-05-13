@@ -33,21 +33,21 @@ const myPortfolio = [
 
 const hmwkAssignments = [
   {
-    id: 1,
+    id: 4,
     title: "Budget-Tracker",
     img: process.env.PUBLIC_URL + "/imgs/budget_tracker.gif",
     github: "https://github.com/ccsxw6/Budget-Tracker",
     deployed: "https://shrouded-dusk-43560.herokuapp.com/"
   },
   {
-    id: 2,
+    id: 5,
     title: "Workout-Tracker",
     img: process.env.PUBLIC_URL + "/imgs/workout.gif",
     github: "https://github.com/ccsxw6/Workout_Tracker",
     deployed: "https://sleepy-shelf-44227.herokuapp.com/?id=60579defdfa690001543b029"
   },
   {
-    id: 3,
+    id: 6,
     title: "Burger-Logger",
     img: process.env.PUBLIC_URL + "/imgs/burger.gif",
     github: "https://github.com/ccsxw6/Burger-Logger",
@@ -107,7 +107,7 @@ export default function Portfolio() {
       </div>
 
   <div className="grid-container">
-    {myPortfolio.map((d) => (
+    {data.map((d) => (
       <div className="cardWrapper">
           <img 
           src={d.img} 

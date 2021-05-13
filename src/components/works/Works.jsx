@@ -1,22 +1,21 @@
-import { useState } from "react";
+// import { useState } from "react";
 import "./works.scss";
 
 export default function Works() {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  // const [currentSlide, setCurrentSlide] = useState(0);
 
   const data = [
     {
       id: "1",
       img:
-        "assets/Vixen.jpg",
+        "/imgs/Vixen.jpg",
     },
     {
       id: "2",
       img:
-        "assets/Pirates.jpg",
+        "/imgs/Pirates.jpg",
     },
   ];
-
   
   return (
     <div className="works" id="works">

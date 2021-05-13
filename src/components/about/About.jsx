@@ -38,7 +38,7 @@ function About() {
                     </audio>
                 </div>
                 {/* <br /> */}
-                <p>Feel free to checkout my <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/document/d/1tDphDI-Skk4qkBMngADISuTCDhGC2-5yOpPIQS1LrTs/edit?usp=sharing">Resume</a> or <a target="_blank" rel="noopener noreferrer" href="https://github.com/ccsxw6">Github</a> and <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/christopherstanfill/">Linkedin</a> accounts</p>
+                <p>Feel free to email or call me and checkout my <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/document/d/1tDphDI-Skk4qkBMngADISuTCDhGC2-5yOpPIQS1LrTs/edit?usp=sharing">Resume</a> or <a target="_blank" rel="noopener noreferrer" href="https://github.com/ccsxw6">Github</a> and <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/christopherstanfill/">Linkedin</a> accounts.</p>
             </div>
         </div>
     // </div>
