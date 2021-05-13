@@ -7,19 +7,6 @@ import "./portfolio.scss";
 //   myPortfolio
 // } from "./data.js";
 
-// THIS LINK WORKS
-
-
-
-// TRY PUTTING IMAGES IN AN IMAGES FOLDER INSIDE OF THE PORTFOLIO FOLDER, LIKE IN INTRO.JS
-
-
-
-// import Raspberry from "/imgs/raspberry.png";
-// import Casino from "/imgs/casino.png";
-// import { Card } from "../card/Card";
-
-
 const myPortfolio = [
   {
     id: 1,
@@ -44,11 +31,34 @@ const myPortfolio = [
   },
 ];
 
+const hmwkAssignments = [
+  {
+    id: 1,
+    title: "Budget-Tracker",
+    img: process.env.PUBLIC_URL + "/imgs/budget_tracker.gif",
+    github: "https://github.com/ccsxw6/Budget-Tracker",
+    deployed: "https://shrouded-dusk-43560.herokuapp.com/"
+  },
+  {
+    id: 2,
+    title: "Workout-Tracker",
+    img: process.env.PUBLIC_URL + "/imgs/workout.gif",
+    github: "https://github.com/ccsxw6/Workout_Tracker",
+    deployed: "https://sleepy-shelf-44227.herokuapp.com/?id=60579defdfa690001543b029"
+  },
+  {
+    id: 3,
+    title: "Burger-Logger",
+    img: process.env.PUBLIC_URL + "/imgs/burger.gif",
+    github: "https://github.com/ccsxw6/Burger-Logger",
+    deployed: "https://polar-ridge-96912.herokuapp.com/burgers"
+  },
+];
+
 export default function Portfolio() {
   const [selected, setSelected] = useState("projects");
   // data is going to be what's stored in the myPortfolio component
   const [data, setData] = useState([]);
-
 
   const list = [
     {
@@ -56,19 +66,20 @@ export default function Portfolio() {
       title: "Projects",
     },
     {
-      id: "assigments",
-      title: "Assigments",
+      id: "assignments",
+      title: "Assignments",
     },
   ];
 
   useEffect(() => {
+    // if selected = etc...
     switch (selected) {
       case "projects":
         setData(myPortfolio);
         console.log(myPortfolio);
         break;
-      case "assigments":
-        setData(myPortfolio);
+      case "assignments":
+        setData(hmwkAssignments);
         break;
       default:
         setData(myPortfolio);
@@ -107,11 +118,11 @@ export default function Portfolio() {
             <h3>{d.title}</h3>
 
             <p>
-            <a target="_blank" rel="noopener noreferrer" href={d.github}>{d.github}</a>
+            <a target="_blank" rel="noopener noreferrer" href={d.github}>GitHub Repo</a>
             </p>
 
             <p>
-            <a target="_blank" rel="noopener noreferrer" href={d.deployed}>{d.deployed}</a>
+            <a target="_blank" rel="noopener noreferrer" href={d.deployed}>Deployed Link</a>
             </p> 
           </div>
       </div>

@@ -6,10 +6,11 @@
     display: grid;
     h1{
       text-align: center;
+      padding-top: 50px;
     }
     ul{
       display: grid;
-    grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
     }
   }
 
@@ -18,7 +19,7 @@
     background-color: white;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 400px;
-    column-gap: 20px;
+    column-gap: 40px;
     // row-gap: 20px;
     .cardWrapper{
       display: grid;
