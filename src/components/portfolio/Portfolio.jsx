@@ -51,6 +51,15 @@ const hmwkAssignments = [
   },
 ];
 
+const inProgress = [
+  {
+    id: 4,
+    title: "Budget-Tracker",
+    img: process.env.PUBLIC_URL + "/imgs/music.jpg",
+    github: "https://github.com/ccsxw6/music_app",
+  }
+]
+
 export default function Portfolio() {
   const [selected, setSelected] = useState("projects");
   // data is going to be what's stored in the myPortfolio component
@@ -65,6 +74,10 @@ export default function Portfolio() {
       id: "assignments",
       title: "Assignments",
     },
+    {
+      id: "inProgress",
+      title: "In Progress",
+    },
   ];
 
   useEffect(() => {
@@ -76,6 +89,9 @@ export default function Portfolio() {
         break;
       case "assignments":
         setData(hmwkAssignments);
+        break;
+      case "inProgress":
+        setData(inProgress);
         break;
       default:
         setData(myPortfolio);
