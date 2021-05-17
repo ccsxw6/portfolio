@@ -1,11 +1,7 @@
 import { useState, useEffect } from "react";
 import PortfolioList from "../portfolioList/PortfolioList";
 import "./portfolio.scss";
-// import {
-//   featuredPortfolio,
-//   contentPortfolio,
-//   myPortfolio
-// } from "./data.js";
+
 
 const myPortfolio = [
   {
@@ -88,7 +84,6 @@ export default function Portfolio() {
 
 
   return (
-    // <div className="bigDaddyWrapper">
     <div className="aboutWrapper" id="portfolio">
       <div className="list">
         <h1>Portfolio</h1>

@@ -38,7 +38,7 @@ function About() {
                     </audio>
                 </div>
                 {/* <br /> */}
-                <p>Feel free to email or call me and checkout my <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/document/d/1tDphDI-Skk4qkBMngADISuTCDhGC2-5yOpPIQS1LrTs/edit?usp=sharing">Resume</a> or <a target="_blank" rel="noopener noreferrer" href="https://github.com/ccsxw6">Github</a> and <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/christopherstanfill/">Linkedin</a> accounts.</p>
+                <p>Feel free to email or call me and checkout my <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/document/d/1fFxGXwVXVFoayrG3xizGgIz9qpukwLN70RR0RiDbqZ8/edit?usp=sharing">Resume</a> or <a target="_blank" rel="noopener noreferrer" href="https://github.com/ccsxw6">Github</a> and <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/christopherstanfill/">Linkedin</a> accounts.</p>
             </div>
         </div>
     // </div>
@@ -46,44 +46,3 @@ function About() {
 }
 
 export default About;
-
-{
-  /* <h4 className="card-title">Chris Stanfill, Software Developer</h4>
-
-<p className="card-text">
-  I am a software developer based in St. Louis, Missouri. I am currently
-  earning a certificate in Full Stack Web Development from the Washington
-  University Coding Boot Camp. I have an extensive background in music and
-  opera, which provides me a unique perspective on how to work in a
-  creative, team-oriented environment.
-</p>
-<p>
-  After completing the Bootcamp, I will be a Full Stack Developer
-  proficient in HTML5, CSS3, JavaScript, jQuery, Express.js, React.js,
-  Node.js, Progressive Web Apps, Database Theory, MongoDB, MySQL, Git,
-  Python, Java, C#, PHP and more.
-</p>
-
-<a href="https://docs.google.com/document/d/1tDphDI-Skk4qkBMngADISuTCDhGC2-5yOpPIQS1LrTs/edit?usp=sharing">
-  Resume
-</a>
-
-<div className="container text-center">
-  <div className="card-footer justify-content-center">
-    <a
-      target="_blank"
-      rel="noopener noreferrer"
-      href="https://www.linkedin.com/in/christopherstanfill/"
-    >
-      <i class="fab fa-linkedin fa-3x"></i>
-    </a>
-    <a
-      target="_blank"
-      rel="noopener noreferrer"
-      href="https://github.com/ccsxw6"
-    >
-      <i class="fab fa-github-square fa-3x"></i>
-    </a>
-  </div>
-</div> */
-}
