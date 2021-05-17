@@ -5,7 +5,7 @@ This application is my current portfolio. It contains a bio section with links t
 
 ## Deployment
 
-https://ccsxw6.github.io/react-portfolio/
+https://ccsxw6.github.io/portfolio/
 
 ## Technologies Used
 This project used the following technologies:
