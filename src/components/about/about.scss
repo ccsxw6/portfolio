@@ -14,3 +14,15 @@
     }
 }
 
+@media screen and (max-width: 900px) {
+ .aboutContainer{
+  overflow: scroll;
+  // margin-bottom: 100px;
+   .bio{
+   text-overflow: ellipsis;
+   padding: 20px;
+  //  overflow: scroll;
+  // margin-bottom: 100px;
+  }
+ }
+}
