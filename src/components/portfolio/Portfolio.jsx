@@ -54,7 +54,7 @@ const hmwkAssignments = [
 const inProgress = [
   {
     id: 4,
-    title: "Budget-Tracker",
+    title: "music_app",
     img: process.env.PUBLIC_URL + "/imgs/music.jpg",
     github: "https://github.com/ccsxw6/music_app",
   }
