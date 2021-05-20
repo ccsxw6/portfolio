@@ -1,117 +1,87 @@
-.portfolio {
-  background-color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 100px;
-}
-
-.portfolio h1 {
-  font-size: 50px;
-}
-
-@media (max-width: 768px) {
-  .portfolio h1 {
-    font-size: 20px;
+@media screen and (min-width: 760px) {
+  .aboutWrapper {
+    display: -ms-grid;
+    display: grid;
+    padding-top: 150px;
+    margin-bottom: 50px;
+  }
+  .aboutWrapper .list {
+    display: -ms-grid;
+    display: grid;
+  }
+  .aboutWrapper .list h1 {
+    text-align: center;
+  }
+  .aboutWrapper .list ul {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  .aboutWrapper .grid-container {
+    display: -ms-grid;
+    display: grid;
+    background-color: white;
+    -ms-grid-rows: 400px;
+        grid-template-rows: 400px;
+    -webkit-column-gap: 40px;
+            column-gap: 40px;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  .aboutWrapper .grid-container .cardWrapper {
+    display: -ms-grid;
+    display: grid;
+  }
+  .aboutWrapper .grid-container .cardWrapper img {
+    max-width: 100%;
+    height: 75%;
+  }
+  .aboutWrapper .grid-container .cardWrapper .projInfo > * {
+    margin: 0;
+    overflow: hidden;
+    text-align: center;
   }
 }
 
-.portfolio ul {
-  margin: 10px;
-  padding: 0;
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-@media (max-width: 768px) {
-  .portfolio ul {
-    margin: 10px 0;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+@media screen and (max-width: 760px) {
+  .aboutWrapper {
+    display: -ms-grid;
+    display: grid;
   }
-}
-
-.portfolio .container {
-  background-color: blue;
-  width: 70%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-@media (max-width: 768px) {
-  .portfolio .container {
-    width: 100%;
+  .aboutWrapper .list {
+    display: -ms-grid;
+    display: grid;
   }
-}
-
-.portfolio .container .item {
-  width: 370px;
-  height: 300px;
-  border-radius: 20px;
-  border: 1px solid #f0efef;
-  margin: 10px 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  color: white;
-  position: relative;
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease;
-  cursor: pointer;
-}
-
-@media (max-width: 768px) {
-  .portfolio .container .item {
-    width: 130px;
-    height: 100px;
+  .aboutWrapper .list h1 {
+    text-align: center;
   }
-}
-
-.portfolio .container .item h3 {
-  position: absolute;
-  font-size: 20px;
-}
-
-.portfolio .container .item img {
-  width: 50PX;
-  height: 50PX;
-  z-index: 1;
-  overflow: hidden;
-}
-
-.portfolio .container .item:hover {
-  background-color: #15023a;
-}
-
-.portfolio .container .item:hover img {
-  opacity: 0.2;
-  z-index: 0;
+  .aboutWrapper .list ul {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .aboutWrapper .grid-container {
+    display: -ms-grid;
+    display: grid;
+    background-color: white;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    row-gap: 10px;
+  }
+  .aboutWrapper .grid-container .cardWrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .aboutWrapper .grid-container .cardWrapper img {
+    display: -ms-grid;
+    display: grid;
+    max-width: 100%;
+    text-align: center;
+  }
 }
 /*# sourceMappingURL=portfolio.css.map */

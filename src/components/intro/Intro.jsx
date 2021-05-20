@@ -30,11 +30,11 @@ export default function Intro() {
           <h3>
             Software <span ref={textRef}></span>
           </h3>
-        </div>
         {/* correlates to the id about in the about component */}
         <a href="#about">
           <img src={Down} alt="arrow" />
         </a>
+        </div>
       </div>
     </div>
   );

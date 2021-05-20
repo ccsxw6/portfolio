@@ -18,6 +18,7 @@
       align-items: center;
       justify-content: center;
       float: right;
+      overflow: hidden;
 
       @include mobile{
         align-items: flex-start;
@@ -25,9 +26,11 @@
 
       img {
         height: 90%;
+        margin-top: 75px;
 
         @include mobile{
-          height: 50%;
+          // height: 50%;
+          // height: 100%;
         }
       }
     }

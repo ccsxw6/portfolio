@@ -37,6 +37,7 @@
       -ms-flex-pack: center;
           justify-content: center;
   float: right;
+  overflow: hidden;
 }
 
 @media (max-width: 768px) {
@@ -49,12 +50,7 @@
 
 .intro .left .imgContainer img {
   height: 90%;
-}
-
-@media (max-width: 768px) {
-  .intro .left .imgContainer img {
-    height: 50%;
-  }
+  margin-top: 75px;
 }
 
 .intro .right {
@@ -152,6 +148,12 @@
   width: 30px;
   -webkit-animation: arrowBlink 2s infinite;
           animation: arrowBlink 2s infinite;
+}
+
+@media (max-width: 768px) {
+  .intro .right a img {
+    display: none;
+  }
 }
 
 @-webkit-keyframes arrowBlink {

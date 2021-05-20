@@ -1,11 +1,13 @@
 @import "../../global.scss";
 
+//desktop
+@media screen and (min-width: 760px) {
 .aboutContainer{
   background-color: white;
   font-size: large;
   line-height: 1.6;
   color: rgb(95, 3, 60);
-  padding-top: 50px;
+  padding-top: 100px;
   .bio{
       text-align: center;
       max-width: 50rem;
@@ -13,16 +15,18 @@
       object-fit: cover;
     }
 }
+}
 
-@media screen and (max-width: 900px) {
+//mobile
+@media screen and (max-width: 760px) {
  .aboutContainer{
   overflow: scroll;
-  // margin-bottom: 100px;
+  // padding-top: 50px;
+  color: rgb(95, 3, 60);
    .bio{
+    text-align: center;
    text-overflow: ellipsis;
    padding: 20px;
-  //  overflow: scroll;
-  // margin-bottom: 100px;
   }
  }
 }
