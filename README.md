@@ -3,6 +3,8 @@
 # Description 
 This application is my current portfolio. It contains a bio section with links to my resume, linkedin, and github accounts. You can view projects and homework assignemts that I have been working on by navigating to the portfolio section. 
 
+![GIF Of Functionality](portfolioGif.gif)
+
 ## Deployment
 
 https://ccsxw6.github.io/portfolio/
