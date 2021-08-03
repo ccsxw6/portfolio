@@ -18,8 +18,7 @@ function About() {
                 the Full Stack Web Development program from the Washington University
                 Coding Boot Camp, I am proficient in HTML5, CSS3,
                 JavaScript, jQuery, Express.js, React.js, Node.js, Progressive Web
-                Apps, MongoDB, MySQL, Git. I am currently learning Python, Java, C#,
-                PHP and more.
+                Apps, MongoDB, MySQL, Git. In addition to honing my current skills, I am learning Typescript, and I plan on learning Python, Java, C#, PHP and more.
                 </p>
                 <p>
                 Before becoming a software developer, I made a living as a musician.
