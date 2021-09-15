@@ -54,16 +54,10 @@ const hmwkAssignments = [
 const inProgress = [
   {
     id: 7,
-    title: "music_app",
-    img: process.env.PUBLIC_URL + "/imgs/music.jpg",
-    github: "https://github.com/ccsxw6/music_app",
+    title: "react_reading_list",
+    img: process.env.PUBLIC_URL + "/imgs/books.jpg",
+    github: "https://github.com/ccsxw6/react_reading_list",
   }, 
-  {
-  id: 8, 
-  title: "react-blog",
-  img: process.env.PUBLIC_URL + "/imgs/music.jpg", 
-  github: "https://github.com/ccsxw6/react_blog",
-  }
 ]
 
 export default function Portfolio() {
