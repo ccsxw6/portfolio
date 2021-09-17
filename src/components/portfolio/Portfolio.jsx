@@ -105,7 +105,7 @@ export default function Portfolio() {
         <h1>Portfolio</h1>
         <ul>
           {list.map((item) => (
-            // Portfoliolist is the tabs to switch between project and assignments
+            // Portfoliolist = the tabs to switch between project and assignments
             <PortfolioList
               title={item.title}
               active={selected === item.id}
