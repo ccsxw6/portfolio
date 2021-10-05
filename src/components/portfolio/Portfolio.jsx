@@ -20,10 +20,10 @@ const myPortfolio = [
   },
   {
     id: 3,
-    title: "Raspberry Jam Session",
-    img: process.env.PUBLIC_URL + "/imgs/raspberry.png",
-    github: "https://github.com/ccsxw6/Raspberry-Jam-Session",
-    deployed: "https://ccsxw6.github.io/Raspberry-Jam-Session/"
+    title: "Reading List App",
+    img: process.env.PUBLIC_URL + "/imgs/reading.gif",
+    github: "https://github.com/ccsxw6/reading-list-app",
+    deployed: "https://reading-app-list.herokuapp.com/"
   },
 ];
 
@@ -54,9 +54,10 @@ const hmwkAssignments = [
 const inProgress = [
   {
     id: 7,
-    title: "react_reading_list",
-    img: process.env.PUBLIC_URL + "/imgs/books.jpg",
-    github: "https://github.com/ccsxw6/react_reading_list",
+    title: "Reading List App",
+    img: process.env.PUBLIC_URL + "/imgs/reading.gif",
+    github: "https://github.com/ccsxw6/reading-list-app",
+    deployed: "https://reading-app-list.herokuapp.com/"
   }, 
 ]
 
@@ -122,7 +123,7 @@ export default function Portfolio() {
       <div className="cardWrapper">
           <img 
           src={d.img} 
-          alt="yo" 
+          alt="project" 
           key={d.id}
           />
           <div className="projInfo">
@@ -130,7 +131,6 @@ export default function Portfolio() {
             <p>
             <a target="_blank" rel="noopener noreferrer" href={d.github}>GitHub Repo</a>
             </p>
-
             <p>
             <a target="_blank" rel="noopener noreferrer" href={d.deployed}>Deployed Link</a>
             </p> 
