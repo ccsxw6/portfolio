@@ -22,7 +22,7 @@ const myPortfolio = [
     id: 3,
     title: "Reading List App",
     img: process.env.PUBLIC_URL + "/imgs/reading.gif",
-    github: "https://github.com/ccsxw6/reading-list-app",
+    github: "https://hidden-fortress-30219.herokuapp.com/",
     deployed: "https://reading-app-list.herokuapp.com/"
   },
 ];
