@@ -54,10 +54,10 @@ const hmwkAssignments = [
 const inProgress = [
   {
     id: 7,
-    title: "Reading List App",
-    img: process.env.PUBLIC_URL + "/imgs/reading.gif",
-    github: "https://github.com/ccsxw6/reading-list-app",
-    deployed: "https://reading-app-list.herokuapp.com/"
+    title: "Conversation",
+    img: process.env.PUBLIC_URL + "/imgs/restaurant.jpg",
+    github: "https://github.com/ccsxw6/Conversation",
+    deployed: "https://github.com/ccsxw6/Conversation"
   }, 
 ]
 
